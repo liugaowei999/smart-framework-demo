@@ -4,6 +4,9 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="smart-framework-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/smart-framework/smart-framework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="smart-framework-demo"/>
         <property name="java-output-path" value="/smart-framework-demo/target/classes"/>
     </wb-module>
