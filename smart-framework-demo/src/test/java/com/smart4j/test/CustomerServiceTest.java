@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 
 import org.junit.Test;
 
-import com.smart4j.helper.DatabaseHelper;
-import com.smart4j.utils.ClassUtil;
+import com.smart4j.framework.helper.DatabaseHelper;
+import com.smart4j.framework.utils.ClassUtil;
 
 //import com.liugw.learn.helper.DatabaseHelper;
 

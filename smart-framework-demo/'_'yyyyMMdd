@@ -498,3 +498,736 @@ java.sql.SQLException: Null connection
 16:55:34,940 DEBUG com.smart4j.utils.ClassUtil (76) - jarEntryName=junit/textui/TestRunner.class
 16:55:34,942 DEBUG com.smart4j.utils.ClassUtil (76) - jarEntryName=junit/textui/ResultPrinter.class
 16:55:34,943 DEBUG com.smart4j.utils.ClassUtil (76) - jarEntryName=LICENSE-junit.txt
+19:54:32,394 ERROR com.smart4j.helper.DatabaseHelper (70) - get connection failure
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: YES))
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2294)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2039)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1533)
+	at com.smart4j.helper.DatabaseHelper.getConnection(DatabaseHelper.java:68)
+	at com.smart4j.helper.DatabaseHelper.executeUpdate(DatabaseHelper.java:190)
+	at com.smart4j.test.CustomerServiceTest.init(CustomerServiceTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:539)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:761)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:461)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:207)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:545)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:513)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:115)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:39)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:256)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2304)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2290)
+	... 28 more
+19:54:32,401 ERROR com.smart4j.helper.DatabaseHelper (193) - execute update failure
+java.sql.SQLException: Null connection
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:472)
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:404)
+	at com.smart4j.helper.DatabaseHelper.executeUpdate(DatabaseHelper.java:191)
+	at com.smart4j.test.CustomerServiceTest.init(CustomerServiceTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:539)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:761)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:461)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:207)
+19:54:32,422 DEBUG com.smart4j.utils.ClassUtil (58) - file:/E:/dev/workspace/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn/pojo
+19:54:32,422 DEBUG com.smart4j.utils.ClassUtil (61) - protocol=file
+19:54:32,423 DEBUG com.smart4j.utils.ClassUtil (112) - fileName=Customer.class
+19:54:32,429 DEBUG com.smart4j.utils.ClassUtil (120) - className=com.liugw.learn.pojo.Customer
+19:54:32,431 DEBUG com.smart4j.utils.ClassUtil (58) - jar:file:/E:/dev/tools/eclipse-jee-oxygen-1a-win32-x86_64/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar!/org/junit
+19:54:32,431 DEBUG com.smart4j.utils.ClassUtil (61) - protocol=jar
+19:54:32,432 DEBUG com.smart4j.utils.ClassUtil (71) - jarFile=E:\dev\tools\eclipse-jee-oxygen-1a-win32-x86_64\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar
+19:54:32,432 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=META-INF/
+19:54:32,432 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=META-INF/MANIFEST.MF
+19:54:32,433 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/
+19:54:32,433 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/
+19:54:32,433 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/
+19:54:32,433 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/
+19:54:32,433 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/
+19:54:32,435 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/
+19:54:32,435 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/matchers/
+19:54:32,435 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/
+19:54:32,435 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/
+19:54:32,436 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/
+19:54:32,437 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/runners/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/
+19:54:32,438 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/
+19:54:32,439 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/
+19:54:32,439 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/
+19:54:32,439 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/textui/
+19:54:32,439 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/ClassRule.class
+19:54:32,439 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Assert.class
+19:54:32,440 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/After.class
+19:54:32,440 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$Clock.class
+19:54:32,440 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/DisableOnDebug.class
+19:54:32,441 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExternalResource.class
+19:54:32,441 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatcher$1.class
+19:54:32,442 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TemporaryFolder.class
+19:54:32,443 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout$Builder.class
+19:54:32,443 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/RunRules.class
+19:54:32,444 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatchman$1.class
+19:54:32,444 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Verifier$1.class
+19:54:32,445 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedException.class
+19:54:32,445 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedException$ExpectedExceptionStatement.class
+19:54:32,446 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/RuleChain.class
+19:54:32,446 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ErrorCollector$1.class
+19:54:32,447 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestRule.class
+19:54:32,447 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Verifier.class
+19:54:32,448 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch.class
+19:54:32,449 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$1.class
+19:54:32,449 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout.class
+19:54:32,450 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedExceptionMatcherBuilder.class
+19:54:32,450 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/MethodRule.class
+19:54:32,451 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout$1.class
+19:54:32,451 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExternalResource$1.class
+19:54:32,452 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatchman.class
+19:54:32,453 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ErrorCollector.class
+19:54:32,454 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatcher.class
+19:54:32,454 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$InternalWatcher.class
+19:54:32,455 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestName.class
+19:54:32,456 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/AssumptionViolatedException.class
+19:54:32,456 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$ComparisonCompactor$DiffExtractor.class
+19:54:32,457 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Assume.class
+19:54:32,458 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/AllTests.class
+19:54:32,458 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Suite$SuiteClasses.class
+19:54:32,459 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/JUnit4.class
+19:54:32,459 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$1.class
+19:54:32,460 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/BlockJUnit4ClassRunner.class
+19:54:32,460 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$Parameters.class
+19:54:32,461 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/MethodSorters.class
+19:54:32,461 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$2.class
+19:54:32,462 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$3.class
+19:54:32,462 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$UseParametersRunnerFactory.class
+19:54:32,462 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$4.class
+19:54:32,463 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner.class
+19:54:32,463 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/BlockJUnit4ClassRunner$1.class
+19:54:32,463 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$Parameter.class
+19:54:32,464 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/ParametersRunnerFactory.class
+19:54:32,465 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/TestWithParameters.class
+19:54:32,465 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.class
+19:54:32,467 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParametersFactory.class
+19:54:32,467 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Suite.class
+19:54:32,468 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/MultipleFailureException.class
+19:54:32,468 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/RunnerScheduler.class
+19:54:32,469 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/NoGenericTypeParametersValidator.class
+19:54:32,469 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$1.class
+19:54:32,470 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/RunnerBuilder.class
+19:54:32,470 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/Annotatable.class
+19:54:32,471 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkField.class
+19:54:32,471 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/Statement.class
+19:54:32,471 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestTimedOutException.class
+19:54:32,472 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMember.class
+19:54:32,472 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass.class
+19:54:32,472 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$FieldComparator.class
+19:54:32,474 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMethod.class
+19:54:32,474 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$MethodComparator.class
+19:54:32,475 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/InitializationError.class
+19:54:32,475 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMethod$1.class
+19:54:32,475 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized.class
+19:54:32,477 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure.class
+19:54:32,477 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/matchers/JUnitMatchers.class
+19:54:32,478 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Test$None.class
+19:54:32,478 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactory.class
+19:54:32,479 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result.class
+19:54:32,479 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCommandLineParseResult$CommandLineParserError.class
+19:54:32,480 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$Listener.class
+19:54:32,480 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCommandLineParseResult.class
+19:54:32,480 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Describable.class
+19:54:32,481 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactories.class
+19:54:32,482 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$SerializedForm.class
+19:54:32,482 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Runner.class
+19:54:32,482 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/RunWith.class
+19:54:32,482 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/NoTestsRemainException.class
+19:54:32,482 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sortable.class
+19:54:32,483 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter.class
+19:54:32,483 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$2.class
+19:54:32,483 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$3.class
+19:54:32,484 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sorter.class
+19:54:32,484 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sorter$1.class
+19:54:32,485 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filterable.class
+19:54:32,485 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$1.class
+19:54:32,486 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCore.class
+19:54:32,487 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactory$FilterNotCreatedException.class
+19:54:32,487 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$1.class
+19:54:32,488 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Request.class
+19:54:32,488 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactoryParams.class
+19:54:32,488 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Computer$1.class
+19:54:32,489 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Request$1.class
+19:54:32,489 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/Failure.class
+19:54:32,489 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier.class
+19:54:32,490 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$1.class
+19:54:32,490 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$2.class
+19:54:32,491 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$3.class
+19:54:32,491 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunListener$ThreadSafe.class
+19:54:32,491 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$4.class
+19:54:32,491 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/SynchronizedRunListener.class
+19:54:32,491 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$SafeNotifier.class
+19:54:32,492 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$5.class
+19:54:32,492 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/StoppedByUserException.class
+19:54:32,492 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$6.class
+19:54:32,493 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$7.class
+19:54:32,493 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunListener.class
+19:54:32,493 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Description.class
+19:54:32,493 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Computer.class
+19:54:32,494 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$FieldValidator.class
+19:54:32,494 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/TestClassValidator.class
+19:54:32,494 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/ValidateWith.class
+19:54:32,494 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$AnnotatableValidator.class
+19:54:32,494 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$MethodValidator.class
+19:54:32,495 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$ClassValidator.class
+19:54:32,495 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationValidatorFactory.class
+19:54:32,495 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationValidator.class
+19:54:32,495 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$1.class
+19:54:32,496 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator.class
+19:54:32,496 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/validator/PublicClassValidator.class
+19:54:32,496 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$1.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Ignore.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/BeforeClass.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Before.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Test.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/AfterClass.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/FixMethodOrder.class
+19:54:32,497 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$ComparisonCompactor.class
+19:54:32,498 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ExactComparisonCriteria.class
+19:54:32,499 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/ThrowableMessageMatcher.class
+19:54:32,501 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/TypeSafeMatcher.class
+19:54:32,501 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/StacktracePrintingMatcher.class
+19:54:32,502 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/ThrowableCauseMatcher.class
+19:54:32,502 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ArrayComparisonFailure.class
+19:54:32,503 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/InexactComparisonCriteria.class
+19:54:32,503 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/TextListener.class
+19:54:32,504 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter.class
+19:54:32,505 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/JUnitSystem.class
+19:54:32,505 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner$OldTestClassAdaptingListener.class
+19:54:32,506 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner$1.class
+19:54:32,507 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$2.class
+19:54:32,508 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/TestMethod.class
+19:54:32,509 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator.class
+19:54:32,509 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeARule.class
+19:54:32,509 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBePublic.class
+19:54:32,510 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/ValidationError.class
+19:54:32,510 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeStatic.class
+19:54:32,510 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$Builder.class
+19:54:32,511 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeNonStaticOrAlsoClassRule.class
+19:54:32,511 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeARule.class
+19:54:32,511 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeATestRule.class
+19:54:32,511 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$RuleValidator.class
+19:54:32,511 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$1.class
+19:54:32,512 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$DeclaringClassMustBePublic.class
+19:54:32,512 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeATestRule.class
+19:54:32,512 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$1.class
+19:54:32,512 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/TestClass.class
+19:54:32,513 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/ErrorReportingRunner.class
+19:54:32,513 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner.class
+19:54:32,514 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/FailedBefore.class
+19:54:32,514 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$1.class
+19:54:32,514 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/Fail.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/RunAfters.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/RunBefores.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/ExpectException.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/InvokeMethod.class
+19:54:32,515 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$Builder.class
+19:54:32,516 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$CallableStatement.class
+19:54:32,516 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner$2.class
+19:54:32,517 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodValidator.class
+19:54:32,517 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner.class
+19:54:32,517 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/SuiteMethod.class
+19:54:32,517 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie.class
+19:54:32,518 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/InitializationError.class
+19:54:32,519 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/ClassRoadie.class
+19:54:32,519 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner$1.class
+19:54:32,520 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$1$1.class
+19:54:32,520 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/ReflectiveCallable.class
+19:54:32,521 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/EachTestNotifier.class
+19:54:32,521 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/MultipleFailureException.class
+19:54:32,521 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/FilterRequest.class
+19:54:32,522 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/ClassRequest.class
+19:54:32,522 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/SortingRequest.class
+19:54:32,522 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/AssumptionViolatedException.class
+19:54:32,522 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/RealSystem.class
+19:54:32,522 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter$2.class
+19:54:32,523 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ComparisonCriteria.class
+19:54:32,523 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/Throwables.class
+19:54:32,523 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter$1.class
+19:54:32,524 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/Classes.class
+19:54:32,524 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/IgnoredClassRunner.class
+19:54:32,524 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/JUnit4Builder.class
+19:54:32,524 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/AnnotatedBuilder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/IgnoredBuilder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/JUnit3Builder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/NullBuilder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/SuiteMethodBuilder.class
+19:54:32,525 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$1.class
+19:54:32,526 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$2.class
+19:54:32,526 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/FailureList.class
+19:54:32,534 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$3.class
+19:54:32,535 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers.class
+19:54:32,535 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/PrintableResult.class
+19:54:32,535 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/ParallelComputer$1.class
+19:54:32,536 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$RememberingListener.class
+19:54:32,537 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore.class
+19:54:32,539 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$1.class
+19:54:32,540 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$TestComparator.class
+19:54:32,540 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore$1.class
+19:54:32,541 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore$1$1.class
+19:54:32,541 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/CouldNotReadCoreException.class
+19:54:32,542 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory.class
+19:54:32,542 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/ParallelComputer.class
+19:54:32,543 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParameterSignature.class
+19:54:32,543 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$2.class
+19:54:32,544 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor.class
+19:54:32,545 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theory.class
+19:54:32,545 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment$1.class
+19:54:32,546 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$1$1.class
+19:54:32,546 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/FromDataPoints.class
+19:54:32,547 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/DataPoints.class
+19:54:32,547 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/TestedOnSupplier.class
+19:54:32,548 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/TestedOn.class
+19:54:32,548 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$1.class
+19:54:32,549 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment.class
+19:54:32,549 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParametersSuppliedBy.class
+19:54:32,549 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories.class
+19:54:32,550 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/DataPoint.class
+19:54:32,550 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier$MethodParameterValue.class
+19:54:32,551 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier.class
+19:54:32,552 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/EnumSupplier.class
+19:54:32,552 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/Assignments.class
+19:54:32,552 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/SpecificDataPointsSupplier.class
+19:54:32,553 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/BooleanSupplier.class
+19:54:32,553 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier$1.class
+19:54:32,554 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/ParameterizedAssertionError.class
+19:54:32,554 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment$CouldNotGenerateValueException.class
+19:54:32,554 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParameterSupplier.class
+19:54:32,555 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/ExcludeCategories$ExcludesAny.class
+19:54:32,556 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/IncludeCategories.class
+19:54:32,557 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/ExcludeCategories.class
+19:54:32,557 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$CategoryFilter.class
+19:54:32,557 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$ExcludeCategory.class
+19:54:32,558 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/CategoryValidator.class
+19:54:32,558 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/IncludeCategories$IncludesAny.class
+19:54:32,559 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Category.class
+19:54:32,559 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/CategoryFilterFactory.class
+19:54:32,559 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories.class
+19:54:32,560 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$IncludeCategory.class
+19:54:32,560 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/runners/Enclosed.class
+19:54:32,561 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=org/junit/Rule.class
+19:54:32,561 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestCase.class
+19:54:32,561 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestResult.class
+19:54:32,562 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestFailure.class
+19:54:32,562 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapter.class
+19:54:32,563 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestResult$1.class
+19:54:32,563 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestSuite$1.class
+19:54:32,564 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/AssertionFailedError.class
+19:54:32,564 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestSuite.class
+19:54:32,564 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/ComparisonCompactor.class
+19:54:32,565 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapterCache.class
+19:54:32,565 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/Assert.class
+19:54:32,565 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/ComparisonFailure.class
+19:54:32,566 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestCaseFacade.class
+19:54:32,566 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/TestListener.class
+19:54:32,566 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/Protectable.class
+19:54:32,566 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapterCache$1.class
+19:54:32,567 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/framework/Test.class
+19:54:32,567 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/Version.class
+19:54:32,567 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/smalllogo.gif
+19:54:32,567 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/logo.gif
+19:54:32,568 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/TestRunListener.class
+19:54:32,568 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/runner/BaseTestRunner.class
+19:54:32,569 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestDecorator.class
+19:54:32,570 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/ActiveTestSuite$1.class
+19:54:32,570 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestSetup.class
+19:54:32,570 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/ActiveTestSuite.class
+19:54:32,571 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestSetup$1.class
+19:54:32,571 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/extensions/RepeatedTest.class
+19:54:32,572 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/textui/TestRunner.class
+19:54:32,572 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=junit/textui/ResultPrinter.class
+19:54:32,573 DEBUG com.smart4j.utils.ClassUtil (80) - jarEntryName=LICENSE-junit.txt
+19:57:39,129 DEBUG com.smart4j.framework.utils.ClassUtil (58) - file:/E:/dev/workspace/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn/pojo
+19:57:39,133 DEBUG com.smart4j.framework.utils.ClassUtil (61) - protocol=file
+19:57:39,134 DEBUG com.smart4j.framework.utils.ClassUtil (112) - fileName=Customer.class
+19:57:39,141 DEBUG com.smart4j.framework.utils.ClassUtil (120) - className=com.liugw.learn.pojo.Customer
+19:57:39,142 DEBUG com.smart4j.framework.utils.ClassUtil (58) - jar:file:/E:/dev/tools/eclipse-jee-oxygen-1a-win32-x86_64/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar!/org/junit
+19:57:39,142 DEBUG com.smart4j.framework.utils.ClassUtil (61) - protocol=jar
+19:57:39,144 DEBUG com.smart4j.framework.utils.ClassUtil (71) - jarFile=E:\dev\tools\eclipse-jee-oxygen-1a-win32-x86_64\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar
+19:57:39,144 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=META-INF/
+19:57:39,145 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=META-INF/MANIFEST.MF
+19:57:39,145 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/
+19:57:39,145 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/
+19:57:39,145 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/
+19:57:39,146 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/
+19:57:39,146 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/
+19:57:39,146 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/
+19:57:39,146 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/matchers/
+19:57:39,148 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/
+19:57:39,148 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/
+19:57:39,149 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/
+19:57:39,149 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/
+19:57:39,149 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/
+19:57:39,149 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/
+19:57:39,150 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/
+19:57:39,150 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/
+19:57:39,150 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/
+19:57:39,150 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/
+19:57:39,151 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/
+19:57:39,151 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/
+19:57:39,151 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/
+19:57:39,151 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/
+19:57:39,151 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/
+19:57:39,152 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/
+19:57:39,152 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/
+19:57:39,152 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/
+19:57:39,152 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/
+19:57:39,152 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/runners/
+19:57:39,153 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/
+19:57:39,153 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/
+19:57:39,153 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/
+19:57:39,153 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/
+19:57:39,153 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/textui/
+19:57:39,154 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/ClassRule.class
+19:57:39,158 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Assert.class
+19:57:39,159 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/After.class
+19:57:39,159 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$Clock.class
+19:57:39,160 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/DisableOnDebug.class
+19:57:39,160 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExternalResource.class
+19:57:39,161 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatcher$1.class
+19:57:39,161 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TemporaryFolder.class
+19:57:39,164 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout$Builder.class
+19:57:39,164 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/RunRules.class
+19:57:39,164 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatchman$1.class
+19:57:39,165 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Verifier$1.class
+19:57:39,165 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedException.class
+19:57:39,166 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedException$ExpectedExceptionStatement.class
+19:57:39,167 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/RuleChain.class
+19:57:39,167 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ErrorCollector$1.class
+19:57:39,168 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestRule.class
+19:57:39,168 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Verifier.class
+19:57:39,169 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch.class
+19:57:39,169 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$1.class
+19:57:39,170 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout.class
+19:57:39,171 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExpectedExceptionMatcherBuilder.class
+19:57:39,171 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/MethodRule.class
+19:57:39,172 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Timeout$1.class
+19:57:39,173 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ExternalResource$1.class
+19:57:39,173 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatchman.class
+19:57:39,174 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/ErrorCollector.class
+19:57:39,175 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestWatcher.class
+19:57:39,176 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/Stopwatch$InternalWatcher.class
+19:57:39,177 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/rules/TestName.class
+19:57:39,177 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/AssumptionViolatedException.class
+19:57:39,178 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$ComparisonCompactor$DiffExtractor.class
+19:57:39,179 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Assume.class
+19:57:39,179 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/AllTests.class
+19:57:39,180 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Suite$SuiteClasses.class
+19:57:39,181 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/JUnit4.class
+19:57:39,181 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$1.class
+19:57:39,181 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/BlockJUnit4ClassRunner.class
+19:57:39,181 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$Parameters.class
+19:57:39,182 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/MethodSorters.class
+19:57:39,182 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$2.class
+19:57:39,183 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$3.class
+19:57:39,183 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$UseParametersRunnerFactory.class
+19:57:39,183 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner$4.class
+19:57:39,184 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/ParentRunner.class
+19:57:39,184 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/BlockJUnit4ClassRunner$1.class
+19:57:39,185 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized$Parameter.class
+19:57:39,185 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/ParametersRunnerFactory.class
+19:57:39,186 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/TestWithParameters.class
+19:57:39,187 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.class
+19:57:39,188 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParametersFactory.class
+19:57:39,189 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Suite.class
+19:57:39,189 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/MultipleFailureException.class
+19:57:39,190 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/RunnerScheduler.class
+19:57:39,190 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/NoGenericTypeParametersValidator.class
+19:57:39,191 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$1.class
+19:57:39,192 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/RunnerBuilder.class
+19:57:39,192 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/Annotatable.class
+19:57:39,192 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkField.class
+19:57:39,193 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/Statement.class
+19:57:39,193 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestTimedOutException.class
+19:57:39,193 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMember.class
+19:57:39,194 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass.class
+19:57:39,194 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$FieldComparator.class
+19:57:39,194 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMethod.class
+19:57:39,194 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/TestClass$MethodComparator.class
+19:57:39,195 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/InitializationError.class
+19:57:39,195 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/model/FrameworkMethod$1.class
+19:57:39,195 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runners/Parameterized.class
+19:57:39,196 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure.class
+19:57:39,196 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/matchers/JUnitMatchers.class
+19:57:39,197 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Test$None.class
+19:57:39,197 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactory.class
+19:57:39,198 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result.class
+19:57:39,198 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCommandLineParseResult$CommandLineParserError.class
+19:57:39,199 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$Listener.class
+19:57:39,199 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCommandLineParseResult.class
+19:57:39,200 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Describable.class
+19:57:39,200 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactories.class
+19:57:39,201 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$SerializedForm.class
+19:57:39,201 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Runner.class
+19:57:39,201 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/RunWith.class
+19:57:39,202 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/NoTestsRemainException.class
+19:57:39,202 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sortable.class
+19:57:39,202 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter.class
+19:57:39,202 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$2.class
+19:57:39,203 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$3.class
+19:57:39,203 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sorter.class
+19:57:39,204 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Sorter$1.class
+19:57:39,204 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filterable.class
+19:57:39,204 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/manipulation/Filter$1.class
+19:57:39,205 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/JUnitCore.class
+19:57:39,205 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactory$FilterNotCreatedException.class
+19:57:39,206 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Result$1.class
+19:57:39,207 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Request.class
+19:57:39,207 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/FilterFactoryParams.class
+19:57:39,207 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Computer$1.class
+19:57:39,208 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Request$1.class
+19:57:39,208 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/Failure.class
+19:57:39,209 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier.class
+19:57:39,209 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$1.class
+19:57:39,209 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$2.class
+19:57:39,210 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$3.class
+19:57:39,210 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunListener$ThreadSafe.class
+19:57:39,210 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$4.class
+19:57:39,210 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/SynchronizedRunListener.class
+19:57:39,211 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$SafeNotifier.class
+19:57:39,211 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$5.class
+19:57:39,211 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/StoppedByUserException.class
+19:57:39,211 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$6.class
+19:57:39,212 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunNotifier$7.class
+19:57:39,212 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/notification/RunListener.class
+19:57:39,213 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Description.class
+19:57:39,213 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/runner/Computer.class
+19:57:39,214 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$FieldValidator.class
+19:57:39,214 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/TestClassValidator.class
+19:57:39,214 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/ValidateWith.class
+19:57:39,215 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$AnnotatableValidator.class
+19:57:39,215 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$MethodValidator.class
+19:57:39,215 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$ClassValidator.class
+19:57:39,215 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationValidatorFactory.class
+19:57:39,216 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationValidator.class
+19:57:39,216 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator$1.class
+19:57:39,216 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/AnnotationsValidator.class
+19:57:39,217 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/validator/PublicClassValidator.class
+19:57:39,217 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$1.class
+19:57:39,217 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Ignore.class
+19:57:39,218 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/BeforeClass.class
+19:57:39,218 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Before.class
+19:57:39,218 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Test.class
+19:57:39,218 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/AfterClass.class
+19:57:39,218 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/FixMethodOrder.class
+19:57:39,219 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/ComparisonFailure$ComparisonCompactor.class
+19:57:39,219 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ExactComparisonCriteria.class
+19:57:39,220 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/ThrowableMessageMatcher.class
+19:57:39,223 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/TypeSafeMatcher.class
+19:57:39,223 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/StacktracePrintingMatcher.class
+19:57:39,224 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/matchers/ThrowableCauseMatcher.class
+19:57:39,224 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ArrayComparisonFailure.class
+19:57:39,225 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/InexactComparisonCriteria.class
+19:57:39,225 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/TextListener.class
+19:57:39,226 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter.class
+19:57:39,226 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/JUnitSystem.class
+19:57:39,226 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner$OldTestClassAdaptingListener.class
+19:57:39,227 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner$1.class
+19:57:39,228 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$2.class
+19:57:39,228 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/TestMethod.class
+19:57:39,229 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator.class
+19:57:39,229 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeARule.class
+19:57:39,229 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBePublic.class
+19:57:39,229 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/ValidationError.class
+19:57:39,230 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeStatic.class
+19:57:39,230 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$Builder.class
+19:57:39,230 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeNonStaticOrAlsoClassRule.class
+19:57:39,231 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeARule.class
+19:57:39,231 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeATestRule.class
+19:57:39,231 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$RuleValidator.class
+19:57:39,231 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$1.class
+19:57:39,231 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$DeclaringClassMustBePublic.class
+19:57:39,232 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeATestRule.class
+19:57:39,232 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$1.class
+19:57:39,232 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/TestClass.class
+19:57:39,233 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/ErrorReportingRunner.class
+19:57:39,233 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner.class
+19:57:39,234 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/FailedBefore.class
+19:57:39,234 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$1.class
+19:57:39,235 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/Fail.class
+19:57:39,235 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout.class
+19:57:39,235 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/RunAfters.class
+19:57:39,235 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/RunBefores.class
+19:57:39,236 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/ExpectException.class
+19:57:39,236 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/InvokeMethod.class
+19:57:39,236 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$Builder.class
+19:57:39,237 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/statements/FailOnTimeout$CallableStatement.class
+19:57:39,237 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit4ClassRunner$2.class
+19:57:39,238 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodValidator.class
+19:57:39,238 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner.class
+19:57:39,239 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/SuiteMethod.class
+19:57:39,239 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie.class
+19:57:39,239 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/InitializationError.class
+19:57:39,240 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/ClassRoadie.class
+19:57:39,241 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/JUnit38ClassRunner$1.class
+19:57:39,241 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/MethodRoadie$1$1.class
+19:57:39,242 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/ReflectiveCallable.class
+19:57:39,242 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/EachTestNotifier.class
+19:57:39,242 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/runners/model/MultipleFailureException.class
+19:57:39,243 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/FilterRequest.class
+19:57:39,243 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/ClassRequest.class
+19:57:39,243 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/requests/SortingRequest.class
+19:57:39,243 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/AssumptionViolatedException.class
+19:57:39,243 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/RealSystem.class
+19:57:39,244 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter$2.class
+19:57:39,244 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/ComparisonCriteria.class
+19:57:39,244 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/Throwables.class
+19:57:39,245 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/MethodSorter$1.class
+19:57:39,245 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/Classes.class
+19:57:39,245 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/IgnoredClassRunner.class
+19:57:39,246 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/JUnit4Builder.class
+19:57:39,246 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/AnnotatedBuilder.class
+19:57:39,246 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/IgnoredBuilder.class
+19:57:39,247 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/JUnit3Builder.class
+19:57:39,247 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class
+19:57:39,248 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/NullBuilder.class
+19:57:39,248 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/internal/builders/SuiteMethodBuilder.class
+19:57:39,248 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$1.class
+19:57:39,249 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$2.class
+19:57:39,249 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/FailureList.class
+19:57:39,250 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers$3.class
+19:57:39,251 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/ResultMatchers.class
+19:57:39,251 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/results/PrintableResult.class
+19:57:39,252 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/ParallelComputer$1.class
+19:57:39,252 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$RememberingListener.class
+19:57:39,253 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore.class
+19:57:39,254 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$1.class
+19:57:39,254 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory$TestComparator.class
+19:57:39,255 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore$1.class
+19:57:39,256 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxCore$1$1.class
+19:57:39,257 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/CouldNotReadCoreException.class
+19:57:39,257 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/max/MaxHistory.class
+19:57:39,258 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/ParallelComputer.class
+19:57:39,259 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParameterSignature.class
+19:57:39,259 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$2.class
+19:57:39,260 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor.class
+19:57:39,261 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theory.class
+19:57:39,261 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment$1.class
+19:57:39,262 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$1$1.class
+19:57:39,262 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/FromDataPoints.class
+19:57:39,263 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/DataPoints.class
+19:57:39,263 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/TestedOnSupplier.class
+19:57:39,264 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/suppliers/TestedOn.class
+19:57:39,264 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories$TheoryAnchor$1.class
+19:57:39,265 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment.class
+19:57:39,265 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParametersSuppliedBy.class
+19:57:39,265 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/Theories.class
+19:57:39,266 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/DataPoint.class
+19:57:39,266 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier$MethodParameterValue.class
+19:57:39,267 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier.class
+19:57:39,268 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/EnumSupplier.class
+19:57:39,268 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/Assignments.class
+19:57:39,269 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/SpecificDataPointsSupplier.class
+19:57:39,269 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/BooleanSupplier.class
+19:57:39,270 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/AllMembersSupplier$1.class
+19:57:39,270 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/internal/ParameterizedAssertionError.class
+19:57:39,271 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/PotentialAssignment$CouldNotGenerateValueException.class
+19:57:39,271 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/theories/ParameterSupplier.class
+19:57:39,272 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/ExcludeCategories$ExcludesAny.class
+19:57:39,273 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/IncludeCategories.class
+19:57:39,273 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/ExcludeCategories.class
+19:57:39,275 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$CategoryFilter.class
+19:57:39,276 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$ExcludeCategory.class
+19:57:39,276 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/CategoryValidator.class
+19:57:39,276 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/IncludeCategories$IncludesAny.class
+19:57:39,277 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Category.class
+19:57:39,277 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/CategoryFilterFactory.class
+19:57:39,278 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories.class
+19:57:39,278 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/categories/Categories$IncludeCategory.class
+19:57:39,279 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/experimental/runners/Enclosed.class
+19:57:39,280 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=org/junit/Rule.class
+19:57:39,280 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestCase.class
+19:57:39,280 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestResult.class
+19:57:39,280 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestFailure.class
+19:57:39,281 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapter.class
+19:57:39,282 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestResult$1.class
+19:57:39,282 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestSuite$1.class
+19:57:39,283 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/AssertionFailedError.class
+19:57:39,283 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestSuite.class
+19:57:39,284 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/ComparisonCompactor.class
+19:57:39,285 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapterCache.class
+19:57:39,285 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/Assert.class
+19:57:39,285 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/ComparisonFailure.class
+19:57:39,286 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestCaseFacade.class
+19:57:39,286 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/TestListener.class
+19:57:39,286 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/Protectable.class
+19:57:39,286 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/JUnit4TestAdapterCache$1.class
+19:57:39,287 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/framework/Test.class
+19:57:39,287 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/Version.class
+19:57:39,288 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/smalllogo.gif
+19:57:39,288 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/logo.gif
+19:57:39,288 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/TestRunListener.class
+19:57:39,289 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/runner/BaseTestRunner.class
+19:57:39,290 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestDecorator.class
+19:57:39,291 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/ActiveTestSuite$1.class
+19:57:39,291 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestSetup.class
+19:57:39,292 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/ActiveTestSuite.class
+19:57:39,293 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/TestSetup$1.class
+19:57:39,294 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/extensions/RepeatedTest.class
+19:57:39,294 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/textui/TestRunner.class
+19:57:39,295 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=junit/textui/ResultPrinter.class
+19:57:39,296 DEBUG com.smart4j.framework.utils.ClassUtil (80) - jarEntryName=LICENSE-junit.txt
