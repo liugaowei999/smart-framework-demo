@@ -21,16 +21,47 @@
 	  <version>1.0.0</version>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <!-- servlet 3 -->  
+	<dependency>  
+	    <groupId>javax.servlet</groupId>  
+	    <artifactId>javax.servlet-api</artifactId>  
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
 	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>javax.servlet.jsp-api</artifactId>
+	    <version>2.2.1</version>
+	    <scope>provided</scope>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+	<!-- <dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-log4j12</artifactId>
 	    <version>1.7.25</version>
 	    <scope>test</scope>
-	</dependency>
+	</dependency> -->
     
   </dependencies>
+
   <build>
+  	<plugins>
+  		<plugin>
+           <groupId>org.apache.tomcat.maven</groupId>
+           <artifactId>tomcat7-maven-plugin</artifactId>
+           <version>2.1</version>
+           <configuration>
+               <port>8081</port>
+               <path>/smart</path>
+               <uriEncoding>UTF-8</uriEncoding>
+               <finalName>smart</finalName>
+               <server>tomcat7</server>
+           </configuration>
+        </plugin>
+  	</plugins>
     <finalName>smart-framework-demo</finalName>
   </build>
 </project>
