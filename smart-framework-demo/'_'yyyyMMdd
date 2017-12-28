@@ -438,3 +438,11 @@ java.lang.IllegalArgumentException: argument type mismatch
 path=index.jsp
 ===========================================
 
+14:27:57,773 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:27:57,779 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:27:57,781 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:27:57,789 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:27:57,789 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:27:57,790 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:27:57,791 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:27:57,791 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
