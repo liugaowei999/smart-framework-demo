@@ -285,3 +285,156 @@ java.lang.IllegalArgumentException: wrong number of arguments
 21:58:39,098 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
 21:58:44,119 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
 21:58:44,120 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=hello world
+11:28:48,240 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+11:28:48,246 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+11:28:48,248 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+11:28:48,256 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+11:28:48,257 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+11:28:48,258 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+11:28:48,259 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+11:28:48,259 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+11:29:15,145 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+11:29:15,146 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=hello world
+11:31:44,896 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+11:31:44,901 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+11:31:44,902 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+11:31:44,910 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+11:31:44,910 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+11:31:44,912 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+11:31:44,914 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+11:31:44,914 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+11:31:53,682 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+11:31:53,683 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=hello world
+11:32:59,509 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+11:32:59,513 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+11:32:59,515 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+11:32:59,522 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+11:32:59,522 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+11:32:59,523 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+11:32:59,524 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+11:32:59,524 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+11:33:09,822 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+11:33:09,823 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=hello world
+13:13:56,762 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+13:13:56,767 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+13:13:56,768 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+13:13:56,774 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+13:13:56,774 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+13:13:56,775 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+13:13:56,775 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+13:13:56,776 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+13:14:09,468 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+13:14:09,469 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=Hello world
+13:14:09,784 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+13:14:09,786 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=Hello world
+13:15:10,491 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+13:15:10,493 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=Hello world
+13:19:45,063 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+13:19:45,069 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+13:19:45,070 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+13:19:45,078 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+13:19:45,078 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+13:19:45,081 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+13:19:45,082 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+13:19:45,082 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+13:19:53,431 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, args.length=1
+13:19:53,432 DEBUG com.smart4j.framework.utils.ReflectionUtil (54) - result=Hello world
+13:20:28,696 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+13:20:28,700 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+13:20:28,701 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+13:20:28,706 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+13:20:28,707 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+13:20:28,708 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+13:20:28,709 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+13:20:28,709 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+13:20:37,677 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, method paramcount=0, args.length=1
+13:20:37,687 DEBUG com.smart4j.framework.utils.ReflectionUtil (55) - result=Hello world
+13:21:23,226 DEBUG com.smart4j.framework.utils.ReflectionUtil (43) - methodName=hello, method paramcount=1, args.length=1
+13:21:23,228 ERROR com.smart4j.framework.utils.ReflectionUtil (58) - method invoke failure! methodName=hello, args.length=1
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.smart4j.framework.utils.ReflectionUtil.invokeMethod(ReflectionUtil.java:53)
+	at com.smart4j.framework.DispatcherServlet.service(DispatcherServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+14:00:04,214 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:00:04,219 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:00:04,221 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:00:04,227 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:00:04,228 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:00:04,229 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:00:04,230 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:00:04,230 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:00:14,213 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=hello, method paramcount=1
+14:00:14,215 ERROR com.smart4j.framework.utils.ReflectionUtil (64) - the parameter :[arg0] is missed! when execute the method:[hello]
+14:02:22,958 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:02:22,963 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:02:22,964 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:02:22,971 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:02:22,971 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:02:22,973 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:02:22,973 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:02:22,973 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:02:46,144 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=hello, method paramcount=1
+14:02:46,144 ERROR com.smart4j.framework.utils.ReflectionUtil (65) - the parameter :[arg0] is missed! when execute the method:[hello]
+14:04:28,024 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:04:28,032 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:04:28,036 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:04:28,044 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:04:28,044 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:04:28,047 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:04:28,047 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:04:28,048 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:04:53,622 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:04:53,632 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:04:53,634 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:04:53,643 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:04:53,644 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:04:53,645 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:04:53,646 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:04:53,646 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:05:03,715 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=hello, method paramcount=1
+14:08:21,429 ERROR com.smart4j.framework.utils.ReflectionUtil (66) - the parameter :[arg0] is missed! when execute the method:[hello]
+14:19:19,096 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:19:19,101 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:19:19,103 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:19:19,110 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:19:19,111 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:19:19,112 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:19:19,113 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:19:19,113 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:19:25,992 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=hello, method paramcount=1
+14:19:25,994 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result=Hello jack
+14:22:53,699 DEBUG com.smart4j.framework.utils.ClassUtil (74) - file:/E:/git/smart-framework-demo/smart-framework-demo/smart-framework-demo/target/classes/com/liugw/learn
+14:22:53,704 DEBUG com.smart4j.framework.utils.ClassUtil (77) - protocol=file
+14:22:53,705 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=controller
+14:22:53,723 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=TestController.class
+14:22:53,724 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.controller.TestController
+14:22:53,725 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
+14:22:53,726 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
+14:22:53,726 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:22:58,858 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=hello, method paramcount=1
+14:22:58,860 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result=Hello jack
+14:23:08,928 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=toIndex, method paramcount=0
+14:23:08,929 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result==================View print: ==============
+path=index.jsp
+===========================================
+

@@ -2,6 +2,8 @@ package com.liugw.learn.controller;
 
 import com.smart4j.framework.annotation.Action;
 import com.smart4j.framework.annotation.Controller;
+import com.smart4j.framework.beans.Data;
+import com.smart4j.framework.beans.View;
 
 @Controller
 public class TestController {
@@ -15,7 +17,20 @@ public class TestController {
 	}
 
 	@Action(value = "get:/hello")
-	public String hello() {
-		return "hello world";
+	public Data hello() {
+		Data result = new Data("Hello world");
+		return result;
+	}
+
+	@Action(value = "get:/hello1")
+	public Data hello(String aaa) {
+		Data result = new Data("Hello " + aaa);
+		return result;
+	}
+
+	@Action(value = "get:/index")
+	public View toIndex() {
+		View view = new View("index.jsp");
+		return view;
 	}
 }
