@@ -1,7 +1,8 @@
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8" %>
 <html>
 <body>
 <h2>Hello World!</h2>
-<table>
+<table border="1">
 <tr>
 <td>学生名称</td>
 <td>年龄</td>

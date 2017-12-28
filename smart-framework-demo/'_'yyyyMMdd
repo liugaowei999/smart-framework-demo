@@ -446,3 +446,23 @@ path=index.jsp
 14:27:57,790 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=pojo
 14:27:57,791 DEBUG com.smart4j.framework.utils.ClassUtil (128) - fileName=Customer.class
 14:27:57,791 DEBUG com.smart4j.framework.utils.ClassUtil (136) - className=com.liugw.learn.pojo.Customer
+14:28:49,387 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=toIndex, method paramcount=0
+14:28:49,391 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result==================View print: ==============
+path=index.jsp
+===========================================
+
+14:30:03,248 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=toIndex, method paramcount=0
+14:30:03,251 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result==================View print: ==============
+path=index.jsp
+===========================================
+
+14:30:14,978 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=toIndex, method paramcount=0
+14:30:14,980 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result==================View print: ==============
+path=index.jsp
+===========================================
+
+14:30:51,264 DEBUG com.smart4j.framework.utils.ReflectionUtil (47) - methodName=toIndex, method paramcount=0
+14:30:51,269 DEBUG com.smart4j.framework.utils.ReflectionUtil (83) - result==================View print: ==============
+path=index.jsp
+===========================================
+
